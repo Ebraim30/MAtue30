@@ -10,6 +10,12 @@
                 <div class="input-pass">
                 <label for="password">Senha:</label>
                 <input type="password" placeholder="Digite sua senha"></div>
+                <div class="input-pass">
+                <label for="password">Senha2:</label> 
+                <input type="password" placeholder="Confirme sua senha"></div>
+                <div class="input-date">
+                <label for="date">Data:</label> 
+                <input type="date" placeholder="Date"></div>
                 <button type="submit">Enviar informações</button>
         </form>
     </div>
