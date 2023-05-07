@@ -16,6 +16,10 @@
                 <div class="input-date">
                 <label for="date">Data:</label> 
                 <input type="date" placeholder="Date"></div>
+                <div class="input-endereço">
+                 <label for="text">endereço</label>   
+                <input type="text" placeholder="Digite seu endereço"></div>
+                
                 <button type="submit">Enviar informações</button>
         </form>
     </div>
