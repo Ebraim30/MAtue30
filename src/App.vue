@@ -62,6 +62,9 @@
                 <option value="Java">Java</option>
                 <option value="C#">C#</option>
                 </select>
+                <p>Biografia:</p>
+                <textarea v-model="biografia" cols="50" rows="10"></textarea>
+                <br>
                 <button type="submit">Enviar informações</button>
         </form>
     </div>
