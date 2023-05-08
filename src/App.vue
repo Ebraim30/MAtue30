@@ -74,9 +74,9 @@
         { grid-template-columns: 10% 10%;
                 margin: 15px 15px 15px 15px;}
         .formulario 
-        {border: 15px double rgb(255, 0, 255);
+        {border: 15px double rgb(255, 255, 255);
             border-radius: 10px;
             text-align: center;
             padding: 20px;
-            background-color: rgb(0, 255, 55);}
+            background-color: rgb(0, 0, 0);}
 </style>
