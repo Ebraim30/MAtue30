@@ -214,72 +214,106 @@ export default defineComponent({
   </div>
 </template>
 <style>
+
   .formulario {
-    color:#000000;
-    padding: 20px;
-    background: linear-gradient(to right, rgb(255, 228, 230), rgb(204, 251, 241));
-    border-radius: 20px;
-  }
-
-  form {
-    max-width: 500px;
+    max-width: 1000px;
     margin: 0 auto;
-  }
-
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-  }
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    box-sizing: border-box;
-    border: solid 1px #e97bf7;
-    background: conic-gradient(at left center, rgb(254, 246, 224), rgb(231, 205, 255), rgb(198, 215, 242));
+    padding: 20px;
+    background-color: #0099ff;
+    border-radius: 5px;
     color: #000000;
   }
 
-  button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .user-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .card {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-  }
-
-  .card-content {
+  .formulario label {
+    display: block;
+    font-weight: bold;
     margin-bottom: 10px;
   }
 
-  .card-content div {
-    margin-bottom: 5px;
+  .formulario input[type="text"],
+  .formulario input[type="email"],
+  .formulario input[type="password"],
+  .formulario input[type="date"],
+  .formulario select,
+  .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #000000;
   }
 
-  .card-content strong {
-    font-weight: bold;
+  .formulario button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+ 
+  .formulario button[type="submit"] {
+    background-color: #00ffea; 
+  }
+
+  .formulario button[type="submit"]:hover {
+    background-color: #45a049; 
+  }
+
+  .formulario button[type="button"] {
+    background-color: #ff9800;
+  }
+
+  .formulario button[type="button"]:hover {
+    background-color: #e68a00; 
+  }
+
+  
+  .user-cards {
+    display: flow-root;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  .card {
+    flex: 0 0 300px;
+    background-color: #8900fa;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgb(255, 0, 0);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: none;
+    color: #d9ff00;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .card button.edit {
+    background-color: #ffeb3b; 
+  }
+
+  .card button.edit:hover {
+    background-color: #fdd835; 
+  }
+
+  .card button.delete {
+    background-color: #f44336; 
+  }
+
+  .card button.delete:hover {
+    background-color: #e53935; 
   }
 </style>
