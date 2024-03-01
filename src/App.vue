@@ -116,8 +116,11 @@ export default defineComponent({
       this.linguagem = ""
       this.biografia = ""
     },
+    }
   },
-})
+)
+
+anonimo (hide)
 </script>
 <template>
   <div class="formulario">
@@ -187,12 +190,13 @@ export default defineComponent({
               <textarea v-model="biografia" cols="50" rows="10"></textarea>
               <br>
               <button v-if="!isEditing" type="submit">Registrar</button>
-              <button v-if="isEditing" type="submit">Editar</button>
+              <button v-if="isEditing" type="submit">Confirmar</button>
               <button v-if="isEditing" type="button" @click="cancelEdit">Cancelar</button>
       </form> 
     </div>
     <div class="user-cards">
-    <div v-for="(user, key) in users" :key="key" class="card">
+
+    <div v-for="(user, key, hide) in users" :key="key" class="card">
       <div class="card-content">
         <div><strong>Nome:</strong> {{ user.name }}</div>
         <div><strong>E-mail:</strong> {{ user.email }}</div>
@@ -209,6 +213,7 @@ export default defineComponent({
       <div>
         <button @click="editUser(user)">Editar</button>
         <button @click="deleteUser(key)">Excluir</button>
+        <button @click="anonimo(hide)">Anonimo</button>
       </div>
     </div>
   </div>
@@ -218,7 +223,7 @@ export default defineComponent({
   .formulario {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
     background-color: #0099ff;
     border-radius: 5px;
     color: #000000;
@@ -288,7 +293,7 @@ export default defineComponent({
   }
 
   .card-content {
-    padding: 20px;
+    padding: 30px;
   }
 
   .card button {
@@ -296,7 +301,7 @@ export default defineComponent({
     margin-top: 10px;
     border-radius: 3px;
     border: none;
-    color: #d9ff00;
+    color: #4b398b;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
