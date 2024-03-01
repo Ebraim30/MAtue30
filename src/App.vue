@@ -120,7 +120,6 @@ export default defineComponent({
   },
 )
 
-anonimo (hide)
 </script>
 <template>
   <div class="formulario">
@@ -213,7 +212,6 @@ anonimo (hide)
       <div>
         <button @click="editUser(user)">Editar</button>
         <button @click="deleteUser(key)">Excluir</button>
-        <button @click="anonimo(hide)">Anonimo</button>
       </div>
     </div>
   </div>
