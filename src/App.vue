@@ -6,6 +6,7 @@ export default defineComponent({
   data() {
     return {
       name: "",
+      Idade: "",
       email: "",
       password: "",
       confpass:"",
@@ -39,6 +40,7 @@ export default defineComponent({
       if (this.isEditing && this.editingUserKey) {
         const user = {
           name: this.name,
+          Idade: this.Idade,
           email: this.email,
           password: this.password,
           confpass: this.confpass,
@@ -56,6 +58,7 @@ export default defineComponent({
       } else {
         const user = {
           name: this.name,
+          Idade: this.Idade,
           email: this.email,
           password: this.password,
           confpass: this.confpass,
@@ -71,6 +74,7 @@ export default defineComponent({
       }
       this.getUsers()
       this.name = ""
+      this.Idade = ""
       this.email = ""
       this.password = ""
       this.confpass = ""
@@ -88,6 +92,7 @@ export default defineComponent({
     },
     editUser(user) {
       this.name = user.name
+      this.Idade = user.Idade
       this.email = user.email
       this.password = user.password
       this.confpass = user.confpass
@@ -105,6 +110,7 @@ export default defineComponent({
       this.isEditing = false
       this.editingUserKey = null
       this.name = ""
+      this.Idade = ""
       this.email = ""
       this.password = ""
       this.confpass = ""
@@ -127,6 +133,9 @@ export default defineComponent({
           <div class="input-name">
               <label for="name">Nome</label>
               <input type="text" placeholder="Digite o nome" v-model="name"></div>
+              <div class="input-string">
+                <label for="Idade">Idade</label>
+              <input type="text" placeholder="Digite sua idade" v-model="Idade"></div>
               <div class="input-email">
               <label for="email">Email:</label>
               <input type="email" placeholder="Digite seu email" v-model="email"></div>
@@ -137,7 +146,7 @@ export default defineComponent({
               <label for="password">Confirme sua senha: </label> 
               <input type="password" placeholder="Confirme sua senha" v-model="confpass"></div>
               <div class="input-date">
-              <label for="date">Data:</label> 
+              <label for="date">Data:</label>   
               <input type="date" placeholder="Date" v-model="data"></div>
               <div class="input-endereço">
               <label for="text">endereço</label>   
@@ -195,9 +204,10 @@ export default defineComponent({
     </div>
     <div class="user-cards">
 
-    <div v-for="(user, key, hide) in users" :key="key" class="card">
+    <div v-for="(user, key, hide) in users" :key="key" class="card">Dados Salvos
       <div class="card-content">
         <div><strong>Nome:</strong> {{ user.name }}</div>
+        <div><strong>Idade:</strong> {{ user.Idade }}</div>
         <div><strong>E-mail:</strong> {{ user.email }}</div>
         <div><strong>Senha:</strong> {{ user.password }}</div>
         <div><strong>Estado:</strong> {{ user.estado }}</div>
